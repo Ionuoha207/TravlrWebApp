@@ -1,6 +1,11 @@
-<!-- app_server/views/partials/header.hbs -->
-<header>
-  <nav>
-    <!-- Your navigation menu content -->
-  </nav>
-</header>
+{{> header }}
+<h1>{{title}}</h1>
+<div>
+    {{#each trips}}
+    <div>
+        <h2>{{this.name}}</h2>
+        <p>{{this.description}}</p>
+    </div>
+    {{/each}}
+</div>
+{{> footer }}
